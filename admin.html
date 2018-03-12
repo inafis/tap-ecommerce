@@ -6,9 +6,15 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="admin.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
+<style>
+	html,
+	body{
+	 height: 100%;
+	}
+</style>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 	  <a class="navbar-brand" href="#">TAP</a>
@@ -33,6 +39,37 @@
 	    </ul>
 	  </div>
 	</nav>
+
+	<div class="container">
+	<h1 class="text-center my-3">Administration</h1>
+		<!-- <form> -->
+			<div class="form-group row justify-content-center">
+				<label for="productName" class="col-sm-2 col-form-label">Product Name: </label>
+				<div class="col-sm-4">
+					<input id="productName" name="productName" class="form-control" type="text"/> 
+				</div>
+			</div>
+			<div class="form-group row justify-content-center">
+				<label for="imageLink" class="col-sm-2 col-form-label">Image Link: </label>
+				<div class="col-sm-4">
+					<input id="imageLink" name="imageLink" class="form-control" type="text" value="https://picsum.photos/300/300?image=10"/> 
+				 	<small id="imageLinkHelp" class="form-text text-muted">Please enter a link to your image</small>
+			 	</div>
+			</div>
+			<div class="form-group row justify-content-center">
+				<label for="description" class="col-sm-2 col-form-label">Description: </label>
+				<div class="col-sm-4">
+					<textarea id="description" name="description" class="form-control" rows="3"></textarea>
+					<small id="descriptionHelp" class="form-text text-muted">Please enter a detailed description for your product</small>
+				</div>	
+			</div>
+			<div class="row">
+				<div class="col-sm text-center">
+					<button id="addProductBtn" class="btn btn-primary text-cetner">Add Product</button>
+				</div>
+			</div>
+		<!-- </form> -->
+	</div>
 
 </body>
 </html>
