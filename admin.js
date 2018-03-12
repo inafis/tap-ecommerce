@@ -29,8 +29,8 @@ $(document).ready(function() {
 		productEntry.description = productDescription;
 		productEntry.id = products.length+1;
 		productEntry.markup = "<div class=\"col-sm-4 text-center my-2\">" + 
-			"<div class=\"product-listing\"><img src="+ productEntry.imageSrc +">" +
-			"<p class=\"product-label\">"+productEntry.productName+"</p></div><button class=\"btn btn-primary\">Add to Cart</button></div>";
+			"<div class=\"product-listing\"><img class=\"rounded\" src="+ productEntry.imageSrc +">" +
+			"<p class=\"product-label\">"+productEntry.productName+"</p></div><button class=\"btn btn-primary mt-2\">Add to Cart</button></div>";
 		products.push(JSON.stringify(productEntry));
 	
 		localStorage.setItem("products", JSON.stringify(products));
