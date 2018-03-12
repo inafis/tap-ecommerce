@@ -1,9 +1,9 @@
 $(document).ready(function() {
-	let products = JSON.parse(localStorage.getItem("products"));
+	var products = JSON.parse(localStorage.getItem("products"));
 	if(!products){
 			products = [];
 		}
-	let productEntry = {
+	var productEntry = {
 		"productName": "",
 		"imageSrc":"",
 		"description":"",
@@ -13,14 +13,14 @@ $(document).ready(function() {
 	$('#addProductBtn').on('click', function(event) {
 		event.preventDefault();
 
-		var productName = $("#productName").val();
-		var imageLink = $("#imageLink").val();
-		var description = $("#description").val();
+		let productName = $("#productName").val();
+		let imageLink = $("#imageLink").val();
+		let description = $("#description").val();
 
 		addProduct(productName, imageLink, description);
 
-		var productName = $("#productName").val("");
-		var description = $("#description").val("");
+		$("#productName").val("");
+		$("#description").val("");
 	});
 
 	function addProduct(productName, productImage, productDescription){
