@@ -28,11 +28,15 @@ $(document).ready(function() {
 		productEntry.imageSrc = productImage;
 		productEntry.description = productDescription;
 		productEntry.id = products.length+1;
-		productEntry.markup = "<div class=\"col-sm-4 text-center my-2\">" + 
-			"<div class=\"product-listing\"><img class=\"rounded\" src="+ productEntry.imageSrc +">" +
-			"<p class=\"product-label\">"+productEntry.productName+"</p></div><button class=\"btn btn-primary mt-2\">Add to Cart</button></div>";
+		productEntry.markup = generateElement(productEntry.id, productName, productImage)
 		products.push(JSON.stringify(productEntry));
-	
+
 		localStorage.setItem("products", JSON.stringify(products));
 	};
+
+	function generateElement(id, name, image) {
+		return "<div class=\"col-sm-4 text-center my-2\">" +
+			"<div class=\"product-listing\"><img class=\"rounded\" src="+ image +">" +
+			"<p class=\"product-label\">"+name+"</p></div><button id=\"browse_item_"+ id +"\" onClick=\"addToCart(" + id +")\" class=\"btn btn-primary mt-2\">Add to Cart</button></div>";
+	}
 });

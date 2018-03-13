@@ -3,7 +3,7 @@ $(document).ready(function() {
   // Create Example User In localStorage
   mockData()
 
-  $('#loginButton').on('click', function(event) {
+  $('form').on('submit', function(event) {
 
       // Prevents the default action of the button (In this case prevents the form from submitting)
       event.preventDefault()
@@ -33,7 +33,8 @@ $(document).ready(function() {
       // Load the stored username and password from the database
       let storedUsername = localStorage.getItem("username");
       let storedPassword = localStorage.getItem("password");
-
+      console.log(storedUsername, storedPassword)
+      console.log(username, password)
       // Check the entered username and password match what is in the database
       if(username === storedUsername && password === storedPassword){
         return true;

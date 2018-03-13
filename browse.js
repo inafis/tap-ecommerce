@@ -11,3 +11,13 @@ $(document).ready(function() {
 		}
 	}
 });
+
+function addToCart(id) {
+	var cartItems = JSON.parse(localStorage.getItem("cartItems"))
+	if(!cartItems) {
+		cartItems = []
+	}
+	let product = JSON.parse(localStorage.getItem("products"))[id - 1]
+	cartItems.push(product)
+	localStorage.setItem("cartItems", JSON.stringify(cartItems))
+}
