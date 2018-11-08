@@ -1,14 +1,14 @@
 <!Doctype html>
 <html>
 <head>
-	<title>TAP Ecommerce Example - Login</title>
+	<title>TAP Ecommerce Example - Register</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="DatabaseHelper.js"></script>
-	<script src="login.js"></script>
+	<script src="register.js"></script>
+  <script src="DatabaseHelper.js"></script>
 	<style>
 		.form-signin {
 			max-width: 380px;
@@ -17,7 +17,12 @@
 			background-color: #fff;
 			border: 1px solid rgba(0,0,0,0.1);
 		}
+
+    input {
+      margin-top: 10px;
+    }
 	</style>
+
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -46,12 +51,12 @@
 
 	<div class="my-5">
 		<form class="form-signin">
-			<h2>Please Login</h2>
+			<h2>Create an Account</h2>
 			<br>
 			<input id="username" type="text" class="form-control" name="username" placeholder="Username" required="" autofocus=""/>
 			<input id="password" type="password" class="form-control" name="password" placeholder="Password" required=""/>
+      <input id="passwordConfirm" type="password" class="form-control" name="passwordConfirm" placeholder="Confirm Password" required=""/>
 			<br>
-			<p><a href="register.html">Create an Account!</a></p>
 			<button class="btn btn-primary btn-block">Login</button>
 		</form>
 	</div>
